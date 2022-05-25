@@ -6,7 +6,9 @@ while (numero <= 10){
     console.log('Número', numero)
 
     if(numero === 6){
-        break;
+        break; 
+    /*Aqui com o while eu peço pra percorrer até o 10 porém com o if eu peço pra parar quando chegar no 6
+     e podemos utilizar como exemplo básico para percorrer uma lista*/
 
     }
     numero++
