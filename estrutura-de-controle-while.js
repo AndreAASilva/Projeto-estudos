@@ -20,3 +20,14 @@ while(true){
 }
 
 */ 
+
+var numeroteste = 0
+
+while(numeroteste <= 20){
+    console.log('Número: ', numeroteste)
+    if(numeroteste === 10){
+        break;
+
+    }
+    numeroteste++
+}
