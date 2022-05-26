@@ -21,6 +21,6 @@ console.log("Número da Mega: ", numeroMega)
 
 while(numeroMega <= 6){
     console.log(numeroMega)
-    numeroMega++
+    
 
 }
