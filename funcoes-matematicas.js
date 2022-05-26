@@ -14,13 +14,13 @@ var valorRedondo = Math.round(22.4)
 var valorAleatorio = Math.random();
 
     console.log('Valor aleatório: ', valorAleatorio)
-var numero = valorAleatorio *100;
+var numero = valorAleatorio *10;
 console.log("Valor aleatório ", numero)
 var numeroMega = Math.round(numero)
 console.log("Número da Mega: ", numeroMega)
 
 while(numeroMega <= 6){
     console.log(numeroMega)
-    
+    numeroMega++
 
 }
