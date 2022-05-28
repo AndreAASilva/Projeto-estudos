@@ -166,3 +166,7 @@ var andre = {
 
 console.log(andre.logradouro)
 console.log(andre.conjuje)
+
+delete andre.conjuje.pesoConjuje
+
+console.log(andre.conjuje)
