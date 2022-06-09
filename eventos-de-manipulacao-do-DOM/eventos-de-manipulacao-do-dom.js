@@ -26,3 +26,41 @@ $(function(){
 function botao1Clicado(){
     console.log('Botão 1 clicado')
 }
+
+
+
+function botao2(){
+    
+    //var testeBTN2 = document.getElementById('testebotao2')
+   
+    testebotao2.innerHTML = '<p>Mudou</p>'
+    testebotao2.innerHTML += 'Mudou também'
+
+    
+}
+
+function btnVoltar(){
+
+    var testeVoltar = document.getElementById('testebotao2')
+
+    testeVoltar.innerHTML = 'Testou o botão voltar'
+}
+
+function btn3(){
+
+    //var btn3 = documento.getElementById('botao3')
+
+    alert('Testou')
+}
+
+function listaNomes(){
+var testeLista = {Nome1:'André', Nome2:'Andreza', Nome3:'Amanda', Nome4:'Alice'}
+
+if(testeLista.Nome2 === "Andreza"){
+    var nome = alert(nome)
+
+}else{
+    alert('Não encontrado')
+}
+
+}
