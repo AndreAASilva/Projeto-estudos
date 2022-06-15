@@ -31,3 +31,19 @@ for(propriedade in fox){
 
     console.log(propriedade, fox.hasOwnProperty(propriedade))
 }
+
+var empresa = {
+    gerente: 'Celso'
+}
+
+var empresaNova = {
+    supervisor: 'Mario',
+    coodenador: 'Antonio',
+    tecnico: 'Augusto'
+}
+
+Object.setPrototypeOf(empresaNova, empresa)
+
+console.log(empresaNova)
+
+console.log('empresa: ', empresaNova)
