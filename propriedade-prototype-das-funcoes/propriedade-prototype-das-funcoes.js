@@ -42,3 +42,14 @@ function Empresa(cargo1, cargo2, cargo3){
 var funcionario = new Empresa('Técnico', 'Supervisor', 'Coordenador')
 
 console.log(funcionario)
+
+function Nome(primeiro, segundo, terceiro){
+    this.PrimeiroNome = primeiro
+    this.SegundoNome = segundo
+    this.TerceiroNome = terceiro
+    this.QuartoNome = "Silva"
+}
+
+var nomeCompleto = new Nome('André', 'Anderson', 'Alves')
+
+console.log('Nome completo:', nomeCompleto)
