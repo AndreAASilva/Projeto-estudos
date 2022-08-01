@@ -99,3 +99,131 @@ function myFunction(a, b) {
 
 var soma  = sumAll(3,3,3)
 console.log(soma)
+
+function myFunction (a,b){
+  return a * b
+}
+var funcao = myFunction(2,4)
+console.log(funcao)
+
+var x = myFunc()
+
+function myFunc(){
+  return this
+}
+
+console.log(x)
+
+/*function gerarAleatoria(tamanho){
+  var stringAleatoria = ''
+  var caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+  for (var i = 0; i < tamanho; i++){
+    stringAleatoria += caracteres.charAt(Math.floor(Math.random() * caracteres))
+  }
+  return stringAleatoria
+}
+
+console.log(gerarAleatoria(5))*/
+
+
+
+const myObject = {
+  firstName: 'John',
+  lastName: 'Doe',
+  fullName: function(){
+    return this.firstName + " " + this.lastName
+  }
+}
+var nome = myObject.fullName()
+console.log(nome)
+
+const meuFunc = {
+  nome1: 'André',
+  nome2: 'Anderson',
+  nome3: 'Alves', 
+  nome4: 'Silva',
+  nomeCompleto: function(){
+    return " => "+ this.nome1 + " " + this.nome2 + " " + this.nome3 + " " + this.nome4
+  }
+}
+
+const aprendiz = meuFunc.nomeCompleto()
+console.log(aprendiz)
+
+const myObj = {
+  firstName: 'José',
+  lastName: 'Bezerra',
+  fullName: function(){
+    return this
+  }
+}
+
+var result = myObj.fullName()
+console.log(result)
+
+const myName = {
+  name1: 'Antonio',
+  name2: 'Tadeu',
+  nameCom: function(){
+    return this.name1 + ' ' + this.name2
+  }
+}
+
+var nameCompleto = myName.nameCom()
+console.log(nameCompleto)
+
+
+function myFuncti(arg1, arg2){
+  this.firstName = arg1
+  this.lastName = arg2
+}
+
+const myOb = new myFuncti('José', 'Aldo')
+
+const resultadoNomes = myOb.lastName + " " + myOb.firstName
+
+console.log(resultadoNomes)
+
+
+//Com call(), um objeto pode usar um método pertencente a outro objeto.
+
+const person = {
+  fullName: function(){
+    return this.firstName + ' '+ this.lastName
+  }
+}
+
+const person1 = {
+  firstName: 'Amanda',
+  lastName: 'Silva'
+}
+
+const person2 = {
+  firstName: 'Alice',
+  lastName: 'Silva'
+}
+
+const nameChield = person.fullName.call(person2)
+console.log(nameChield)
+
+
+//O call()método pode aceitar argumentos:
+
+const pessoa = {
+  fullName: function(city, country){
+    return this.firstName + ' ' + this.lastName + ' ' + city + ' ' + country
+  }
+}
+
+const pessoa1 = {
+  firstName: 'Wellington',
+  lastName: 'Silva'
+}
+
+const pessoa2 = {
+  firstName: 'Tota',
+  lastName: 'Silva'
+}
+
+const nomeCompleto = pessoa.fullName.call(pessoa2, 'gosta', 'de Wellington')
+console.log(nomeCompleto)
