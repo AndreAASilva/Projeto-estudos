@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trablhando com DOM</title>
+</head>
+<body>
+
+    
+    <button id="teste" >Botão teste</button>
+    <button id="teste2">Limpar</button>
+
+    <p id="demo"></p>
+
+    <button id="botaoDemo2">Botão DEMO2</button>
+
+    <p id="intro">Teste para estudos</p>
+    <p id="demo2">Impressão do demo2</p>
+
+    <button id="butSeletor">Botão Seletor</button>
+    <p>Encontrando por seletores</p>
+    <p class="seletor1">Olá Mundo!</p>
+    <p class="seletor1">Vamos lá que chegou a hora</p>
+
+    <p id="localSeletor"></p>
+
+
+    <script>
+
+            // Impressão localizando ID
+
+            document.getElementById('teste').onclick = function(){
+                document.getElementById('demo').innerHTML = 'Hello Word!'
+            
+            }
+
+            document.getElementById('teste2').onclick = function(){
+                document.getElementById('demo').innerHTML = " "
+            }
+            
+            //Imprimindo a mesma informação utilizando dois innerHTML
+
+            document.getElementById('botaoDemo2').onclick = function(){
+                const element = document.getElementById('intro')
+                document.getElementById('demo2').innerHTML = 'Texto teste pro demo2: ' + element.innerHTML
+            }
+
+            //Seletores
+
+            document.getElementById('butSeletor').onclick = function(){
+                const element2 = document.querySelectorAll('p.seletor1')
+                document.getElementById('localSeletor').innerHTML = 'Texto teste de selor ' + element2[1].innerHTML
+            }
+    </script>
+    
+</body>
+</html>

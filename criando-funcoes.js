@@ -209,21 +209,79 @@ console.log(nameChield)
 
 //O call()método pode aceitar argumentos:
 
-const pessoa = {
+const nameCom = {
   fullName: function(city, country){
-    return this.firstName + ' ' + this.lastName + ' ' + city + ' ' + country
+    return this.primeiroNome + ' ' + this.segundoNome + ', ' + city + ', ' + country
   }
 }
 
-const pessoa1 = {
-  firstName: 'Wellington',
+const name1 = {
+  primeiroNome: 'André',
+  segundoNome: 'Anderson'
+}
+
+const name2 = {
+  primeiroNome: 'Andreza',
+  segundoNome: 'Martin'
+}
+
+const nameDados = nameCom.fullName.call(name1,'São Paulo', 'SP')
+console.log(nameDados)
+
+
+
+const dados = {
+  dadosCompletos: function(){
+    return this.city + ', ' + this.country
+  }
+}
+
+const data = {
+  city: 'São Paulo',
+  country: 'SP'
+}
+
+const dataCom = dados.dadosCompletos.apply(data)
+console.log(dataCom)
+
+//Função JavaScript bind()
+
+const pers = {
+  firstName: 'Amanda',
+  lastName: 'Silva',
+  nameComp: function(){
+    return this.firstName + ' ' + this.lastName
+  }
+}
+
+const membro = {
+  firstName: 'Alice',
   lastName: 'Silva'
 }
 
-const pessoa2 = {
-  firstName: 'Tota',
-  lastName: 'Silva'
-}
 
-const nomeCompleto = pessoa.fullName.call(pessoa2, 'gosta', 'de Wellington')
-console.log(nomeCompleto)
+const newMember = pers.nameComp.apply(membro)
+console.log(newMember)
+
+// Fechamentos de JavaScript
+
+const add = (function(){
+  let counter = 0
+  return function(){counter +=1
+  return counter}
+})()
+
+console.log(add())
+
+const addTeste = (
+  function(){
+    let num = 0
+    return function(){
+      num +=3
+      return num
+    }
+  }
+)()
+
+console.log(addTeste())
+console.log(addTeste())
