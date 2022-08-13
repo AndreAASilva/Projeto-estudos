@@ -20,12 +20,15 @@ document.getElementById('demo2').innerHTML = 'Inseriu o texto quando atualiza a 
 
 let a, b, c
 a = 5
-b = 3
+b = 5
 c = a*b
 
-document.getElementById('demo3').innerHTML = c
+document.getElementById('demo3').innerHTML = a + ' x ' + b + ' = ' + ' ' +c
 
 function meuCodigo(){
     document.getElementById('demo4').innerHTML = 'Olá Mundo!'
     document.getElementById('demo5').innerHTML = 'Hello World!'
 }
+
+let n = "André "
+console.log(n += "Anderson")
